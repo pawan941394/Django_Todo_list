@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Hello, world!</title>
+
+    <style>.navbar a {
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+button{    margin-left: 4px;}
+.container {
+    max-width: 50%;
+    margin-top: 8%;
+}
+
+.container form {
+    max-width: 50%;
+    margin: auto;
+}
+
+.container2 {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.not {
+    max-width: 25%;
+    padding: 6vh;
+    margin: auto;
+}
+textarea {
+    resize: vertical;
+    padding: 10px;
+    border: 2px solid gainsboro;
+    border-radius: 3px;
+}
+.form-label {
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+.card {
+    padding: 1vh
+}
+input {
+    display: block;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 3px;
+    width: 45vh;
+    font-weight: bold;
+}
+.row {
+    max-width: 100%;
+    background: bisque;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0vh;
+    margin: auto;
+}
+body{
+background:#000f42;
+}
+.form-label {
+    margin-bottom: .5rem;
+    color: floralwhite;
+    font-weight: bolder;
+}</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid" style="    display: flex;
+    margin: auto;
+    justify-content: center;">
+            <a class="navbar-brand" href="/">To Do</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            </div>
+          </nav>
+
+    <div class="container">
+        <form method="post" action="">{% csrf_token %}
+            <div class="mb-3">
+                <label  class="form-label">Note Title</label>
+{{form.title}}
+
+            </div> <label for="floatingTextarea2" class="form-label">Description</label>
+            <div class="mb-3">
+         {{form.desc}}
+
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+  <a href="/" class="btn btn-primary">Home</a>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
