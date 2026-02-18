@@ -25,7 +25,7 @@ SECRET_KEY = 'hljpg%b649^rk+dn%-*+^z!qhcpur=!t7zq-lwt&#9!=6f%!ai'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-todo-list-master-af756c9.kuberns.cloud']
 
 
 # Application definition
